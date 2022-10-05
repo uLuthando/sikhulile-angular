@@ -28,4 +28,9 @@ export class UserService {
   }
   
 
+  getCurrentUser(): Observable<any> {
+    return this.http.get<any>(API_URL + 'v1/admin/Users/current',HTTP_OPTIONS);
+  }
+  
+
 }

@@ -3,6 +3,6 @@
       rel="stylesheet">
 <div class="holder">
     <div class="row">
-        <div *ngFor="let c of categories" class="col-sm-4 card">{{c.name}}</div>
+        <div (click)="goToCategory(c.name)" *ngFor="let c of categories" class="col-sm-4 card">{{c.name}}</div>
     </div>
 </div>

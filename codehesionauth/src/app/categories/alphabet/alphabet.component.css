@@ -1,0 +1,59 @@
+h1{
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 38px;
+    font-weight: 600;
+    padding-top: 8px;
+}
+
+img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.navbar{
+    width: 100%;
+    height: 11vh;
+    background-color: rgb(174, 206, 174);
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    width: 10%;
+    float: right;
+    margin-top: 1.5%;
+    margin-right: 5%;
+}
+
+.btn{
+    height: 5vh;
+    background-color: rgba(10, 31, 75, 0.685);
+    margin-right: 8px;
+    color: white;
+    transition: all 0.2s;
+}
+
+.btn:hover{
+    background-color: rgba(10, 31, 75, 0.87);
+    color: white;
+}
+
+
+.logo{
+    margin-top: 5px;
+    height: 8vh;
+    width: 13%;
+    position: absolute;
+}
+
+.logo img{
+    width: 100%;
+    height: inherit;
+    position: inherit;
+}

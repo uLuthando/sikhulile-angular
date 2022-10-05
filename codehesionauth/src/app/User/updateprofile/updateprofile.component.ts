@@ -32,7 +32,7 @@ export class UpdateprofileComponent implements OnInit {
     Surname: new FormControl('',[Validators.required, Validators.minLength(3), Validators.maxLength(8)]),
     Email: new FormControl('',[
       Validators.required,
-      Validators.pattern("[^_\\W\\s@][\\w.!]*[\\w]*[@][\\w]*[.][\\w.]*"), Validators.minLength(3), Validators.maxLength(8)]),
+      Validators.pattern("[^_\\W\\s@][\\w.!]*[\\w]*[@][\\w]*[.][\\w.]*"), Validators.minLength(3)]),
     IDNumber: new FormControl('',[Validators.required, CustomvalidationService.validateSaID]),
     DOB: new FormControl({value:'', disabled:this.disableInput}),
   })
@@ -63,7 +63,12 @@ export class UpdateprofileComponent implements OnInit {
 
   ngOnInit(): void {
 
-   
+   this.userservice.getCurrentUser().subscribe(res=>{
+    console.log(res);
+    this.name.setValue(res.data.name)
+    this.surname.setValue(res.data.lastName)
+    this.email.setValue(res.data.email)
+   })
     
   }
 

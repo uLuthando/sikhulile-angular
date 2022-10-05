@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { UserService } from '../services/user.service';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor(private userservice:UserService) { }
+  constructor(private userservice:UserService, private router:Router) { }
 
 categories:any[] = []
 
@@ -19,6 +20,10 @@ categories:any[] = []
       console.log(this.categories);
       
     })
+  }
+
+  goToCategory(route:string){
+    this.router.navigate(['categories/'+route.toLowerCase()])
   }
 
 }

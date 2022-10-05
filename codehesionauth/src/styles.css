@@ -5,5 +5,59 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .page{
-    background-color: rgb(25, 31, 114);
+    /* background-color: rgb(25, 31, 114); */
+    background: linear-gradient(90deg, #14557B 3%, #7FCEC5 102.12%);
+}
+
+.navbar{
+    width: 100%;
+    height: 11vh;
+    background-color: rgb(174, 206, 174);
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    width: 10%;
+    float: right;
+    margin-top: 1.5%;
+    margin-right: 5%;
+}
+
+
+
+.btn{
+    height: 5vh;
+    background-color: rgba(10, 31, 75, 0.685);
+    margin-right: 8px;
+    color: white;
+    transition: all 0.2s;
+    /* border-radius: 8px;
+    border: none; */
+    /* padding: 15px;
+    padding-top: 2px; */
+    /* width: 100px; */
+}
+
+.btn:hover{
+    background-color: rgba(10, 31, 75, 0.87);
+    color: white;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 38px;
+    font-weight: 600;
+    margin-top: 0px;
+}
+
+img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 }

@@ -22,6 +22,13 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { HomeComponent } from './categories/home/home.component';
+import { AlphabetComponent } from './categories/alphabet/alphabet.component';
+import { CalendarComponent } from './categories/calendar/calendar.component';
+import { EmergencyservicesComponent } from './categories/emergencyservices/emergencyservices.component';
+import { GreetingsComponent } from './categories/greetings/greetings.component';
+import { MedicalComponent } from './categories/medical/medical.component';
+import { NumbersComponent } from './categories/numbers/numbers.component';
+import { WorkplacesignsComponent } from './categories/workplacesigns/workplacesigns.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +38,14 @@ import { HomeComponent } from './categories/home/home.component';
     UpdateprofileComponent,
     CategoriesComponent,
     NotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    AlphabetComponent,
+    CalendarComponent,
+    EmergencyservicesComponent,
+    GreetingsComponent,
+    MedicalComponent,
+    NumbersComponent,
+    WorkplacesignsComponent
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,9 @@
     </div>
     <mat-card class="example-card">
       <form [formGroup]="loginForm" (ngSubmit)="onFormSubmit()">
-        <h2>Log In</h2>
+        <div class="header">
+            <h2>Login</h2>
+        </div>
         <mat-form-field class="example-full-width">
           <label>
             <input matInput placeholder="Email" formControlName="Email"
