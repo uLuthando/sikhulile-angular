@@ -1,0 +1,19 @@
+.card{
+    background-color: rgb(10, 39, 119);
+    width:20%;
+    margin-right: 15px;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 80px;
+    color: aliceblue;
+}
+
+.row{
+    position: relative;
+    top: 20px;
+    width: 100%;
+    padding-left: 10%;
+}

@@ -1,0 +1,80 @@
+
+<app-nav></app-nav>
+
+
+<div class="example-container mat-elevation-z8">
+    <div class="example-loading-shade"
+         *ngIf="loading">
+      <mat-spinner *ngIf="loading"></mat-spinner>
+    </div>
+    <mat-card class="example-card">
+      <form [formGroup]="updateProfileForm" (ngSubmit)="onFormSubmit()">
+        <div class="header">
+            <h2>Update User Details</h2>
+        </div>
+        
+
+        <mat-form-field class="example-full-width">
+            <label>
+              <input matInput placeholder="Name" formControlName="Name"
+                     [errorStateMatcher]="matcher">
+            </label>
+            <mat-error>
+              <span *ngIf="!updateProfileForm.get('Name')?.valid && updateProfileForm.get('Name')?.touched">Please enter Name</span>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <label>
+              <input matInput placeholder="Surname" formControlName="Surname"
+                     [errorStateMatcher]="matcher">
+            </label>
+            <mat-error>
+              <span *ngIf="!updateProfileForm.get('Surname')?.valid && updateProfileForm.get('Surname')?.touched">Please enter Surname</span>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <label>
+              <input type="email" matInput placeholder="Email" formControlName="Email"
+                     [errorStateMatcher]="matcher">
+            </label>
+            <mat-error>
+              <span *ngIf="!updateProfileForm.get('Email')?.valid && updateProfileForm.get('Email')?.touched">Please enter email</span>
+            </mat-error>
+          </mat-form-field>
+
+
+        <mat-form-field class="example-full-width">
+          <label>
+            <input (ngModelChange)="watcher($event)" matInput placeholder="ID Number" formControlName="IDNumber"
+                   [errorStateMatcher]="matcher">
+          </label>
+          <mat-error>
+            <span *ngIf="!updateProfileForm.get('IDNumber')?.valid && updateProfileForm.get('IDNumber')?.touched">Please enter valid Id Number</span>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <label>
+              <input (change)="validateDate($event)"  type="date" [disabled]="!idnum.dirty"  matInput placeholder="Date of Birth" formControlName="DOB"
+                     [errorStateMatcher]="matcher">
+
+            </label>
+            <mat-error>
+              <span  *ngIf="!updateProfileForm.get('DOB')?.valid && updateProfileForm.get('DOB')?.touched">Please enter valid Date of Birth</span>
+            </mat-error>
+          </mat-form-field>
+
+        <div class="button-row">
+          <button type="submit" id="updateBTN" [disabled]="!updateProfileForm.valid" mat-flat-button  color="primary"><i class="fa fa-user"></i> Update Details</button>
+        </div>
+        <!-- <div class="button-row">
+          <h4>Don't have an account?</h4>
+        </div>
+        <div class="button-row">
+          <a mat-flat-button color="primary" [routerLink]="['/register']"><i class="fa fa-user-plus"></i> Register</a>
+        </div> -->
+      </form>
+    </mat-card>
+  </div>
